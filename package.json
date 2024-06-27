@@ -1,0 +1,24 @@
+{
+  "name": "node-pokemon-api",
+  "version": "1.0.0",
+  "description": "An awesome API Rest to hande some pokemons.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Pokemon"
+  },
+  "author": "PhaphaBzh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.3"
+  }
+}
