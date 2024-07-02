@@ -10,10 +10,6 @@ module.exports = (sequelize, DataTypes) => {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
-            // unique: {
-            //     arg: true,
-            //     msg: 'Le nom est déjà pris.'
-            // },
             unique: true,
             validate: {
                 notEmpty: { msg: 'Le champ Nom ne doit pas être vide.' },

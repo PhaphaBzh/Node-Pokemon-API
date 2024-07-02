@@ -19,10 +19,10 @@ module.exports = (app) => {
             })
             .catch(error => {
                 //gestion erreurs métier
-                if (error instanceof ValidationError) {
-                    return res.status(400).json({ message: error.message, data: error })
-                }
                 if (error instanceof UniqueConstraintError) {
+                    return res.status(403).json({ message: "Le nom est déjà pris.", data: error })
+                }
+                if (error instanceof ValidationError) {
                     return res.status(400).json({ message: error.message, data: error })
                 }
                 const message = "Le pokémon n'a pas pu être modifié. Réessayez dans quelques instants."
